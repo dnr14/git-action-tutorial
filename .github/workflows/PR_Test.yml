@@ -2,8 +2,8 @@ name: PR Test
 
 on:
   pull_request:
-    branches:
-      - develop
+      branches:
+           - main
 
 jobs:
     Run:
@@ -14,7 +14,7 @@ jobs:
         steps:
           - name: test code
             run: |
-              npm install
+              npm install &&
               npm test
           - name: ==== fail ====
             uses: actions/github-script@v6
